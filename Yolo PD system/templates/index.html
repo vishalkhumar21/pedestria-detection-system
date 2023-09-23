@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>YOLOv8 Object Detection</title>
+    <!-- Add your CSS and JavaScript libraries here -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,4001,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/static/assets/plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="/static/assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- icheck-bootstrap -->
+    <link rel="stylesheet" href="/static/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="/static/assets/plugins/jqvmap/jqvmap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/static/assets/css/adminlte.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="/static/assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="/static/assets/plugins/daterangepicker/daterangepicker.css">
+    <!-- summernote -->
+    <link rel="stylesheet" href="/static/assets/plugins/summernote/summernote-bs4.min.css">
+
+    <style>
+        /* Customize the upload button */
+        .upload-button {
+            background-color: #007BFF; /* Change the background color */
+            color: #fff; /* Change the text color */
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    
+        /* Style the preview image */
+        .preview-image {
+            max-width: 100%; /* Ensure the image fits within its container */
+            height: auto; /* Maintain the aspect ratio */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow to the image */
+        }
+    
+        /* Customize the section titles */
+        .section-title {
+            color: #333; /* Change the text color */
+            font-size: 24px; /* Change the font size */
+            margin-bottom: 20px; /* Add some space below the titles */
+        }
+    
+        /* Style the header */
+        .header-title {
+            color: #007BFF; /* Change the text color */
+            font-size: 36px; /* Change the font size */
+            margin-bottom: 20px; /* Add some space below the title */
+        }
+    
+        /* Customize the footer */
+        .footer-text {
+            text-align: center;
+            margin-top: 20px; /* Add some space above the footer text */
+            color: #777; /* Change the text color */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="header-title">YOLOv8 Object Detection</h1>
+    </header>
+    <main>
+        <section class="upload-section">
+            <div class="container">
+                <h2 class="section-title">Upload an Image or Video</h2>
+                <form class="upload-form" method="post" enctype="multipart/form-data">
+                    <input type="file" name="file" class="file-input" accept=".jpg, .jpeg, .png, .mp4">
+                    <button class="upload-button" type="submit">Upload</button>
+                </form>
+                <!-- Add an image or video preview here -->
+                <div class="preview-container">
+                    <img src="{{ image_path }}" class="preview-image" alt="Detected Image">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p class="footer-text">Built using PyTorch & Flask</p>
+    </footer>
+</body>
+</html>
